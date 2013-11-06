@@ -60,9 +60,7 @@ The uiAuth script will check the Session service in the SessionSVC script. The S
 `Session.login()`
 `Session.logout()`
 
-All of them respond asynchronously using the promise library, so respond accordingly. More updates and documentation to come soon.
-
-###Notes
+All of them respond asynchronously using the promise library, so use accordingly. More updates and documentation to come soon.
 
 ###Notes
 Developed by <a href='http://twitter.com/ishmaelsalive'>Ishmael tD</a>. <br />
