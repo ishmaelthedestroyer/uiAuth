@@ -8,7 +8,7 @@ This plugin works great with RequireJs (http://requirejs.org/).
 
 In your RequireJs main file, define the SessionSVC + uiAuth scripts as well as their locations. When configuring your states, add any key to your resolve object and use the uiAuth function as its value. It takes an object as a parameter with the values reqAuth and redirLogin, either false or the state to redirect to depending on the session's state. Configuration might look like this (Coffeescript):
 
-`main.js file`
+`main.js`
 <pre>
 require.config
     angular: '/path/to/angular'
