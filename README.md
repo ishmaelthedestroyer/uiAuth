@@ -44,12 +44,12 @@ define [
                 reqAuth: 'login'
                 redirLogin: false
     $stateProvider.state 'login',
-        url: '/route1'
+        url: '/login'
         templateUrl: '/path/to/login.html'
         resolve:
             uiAuth: uiAuth
                 reqAuth: false
-                redirLogin: 'some-secure-route.html' 
+                redirLogin: 'some-secure-route.html'
 </pre>
 
 The uiAuth script will check the Session service in the SessionSVC script. The Session service can be configured for your own usage. It'll provide these functions out-of-the-box:
