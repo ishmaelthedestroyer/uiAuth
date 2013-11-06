@@ -36,16 +36,20 @@ define [
     'uiAuth'
 ], (app) ->
   app.config ($stateProvider, $urlRouterProvider, $locationProvider) ->
-    $stateProvider.state 'route1',
-        url: '/route1'
-        templateUrl: '/path/to/route1.html'
+    $stateProvider.state 'some-secure-route',
+        url: '/some-secure-route'
+        templateUrl: '/path/to/some-secure-route.html'
         resolve:
             uiAuth: uiAuth
                 reqAuth: 'login'
                 redirLogin: false
-
-    $urlRouterProvider.otherwise '/404'
-    $locationProvider.html5Mode true
+    $stateProvider.state 'login',
+        url: '/route1'
+        templateUrl: '/path/to/login.html'
+        resolve:
+            uiAuth: uiAuth
+                reqAuth: false
+                redirLogin: 'some-secure-route.html' 
 </pre>
 
 The uiAuth script will check the Session service in the SessionSVC script. The Session service can be configured for your own usage. It'll provide these functions out-of-the-box:
